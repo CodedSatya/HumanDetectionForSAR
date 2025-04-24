@@ -1,0 +1,14 @@
+#path: C:\Projects\College Projects\HumanDetection\HumanDetection\datasets
+#train: victim_data\images
+#val: victim_data\images
+path: C:\Projects\College Projects\HumanDetection\HumanDetection\data
+train: train\images
+val: val\images
+
+#Classes
+names:
+  0: Bent
+  1: Kneeling
+  2: Lying
+  3: sitting
+  4: upright

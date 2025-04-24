@@ -1,0 +1,7 @@
+python -m kivymd.create_project \
+    MVC \
+    E:\Projects\College Projects\HumanDetection \
+    HumanDetector \
+    python3.11.9 \
+    2.1.0 \
+    --use_hotreload yes

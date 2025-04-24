@@ -1,0 +1,85 @@
+MDBoxLayout:
+  orientation: 'vertical'
+  MDBottomNavigation:
+    #panel_color: "#eeeaea"
+    selected_color_background: "orange"
+    text_color_active: "lightgrey"
+    MDBottomNavigationItem:
+      name: "Screen 1"
+      text: 'Live Detection'
+      icon: 'video-wireless'
+      #on_enter: app.on_start()
+      #on_leave: app.on_stop()
+      #MDTextField:
+      #  hint_text: "Enter source URL"
+      # mode: "rectangle"
+      MDBoxLayout:
+        orientation: "horizontal"
+        MDCard:
+          size_hint_x: 0.25
+          MDBoxLayout:
+            orientation: "vertical"
+            spacing: "20dp"
+            padding: "20dp"
+            adaptive_height: True
+            pos_hint: {'center_y': 0.5}
+            MDRaisedButton:
+              text: "Live Cam"
+              #pos_hint: {'center_x': .1, 'center_y': 0.4}
+              on_release: app.on_start()
+            MDRaisedButton:
+              text: "Source Cam"
+              #pos_hint: {'center_x': .1, 'center_y': .6}
+              on_release: app.on_stop()
+        MDCard:
+          size_hint_x: 0.75
+          id: display
+          Image:
+            id: camera
+            size_hint: 1, 1
+    MDBottomNavigationItem:
+      name: "Screen 2"
+      text: 'Video Detection'
+      icon: 'video'
+      on_enter: app.start_video()
+      MDBoxLayout:
+        orientation: 'vertical'
+        Image:
+          id: video
+          size_hint: 1, 0.9
+        MDBoxLayout:
+          size_hint: 0.9, 0.1
+          MDFlatButton:
+            id: controls
+            text: 'Play'
+            on_press: app.on_play()
+          MDFlatButton:
+            text: 'Stop'
+          MDBoxLayout:
+            size_hint: 1, 1  
+            Slider:
+              id: slider
+              min: 0
+              max: app.total_frame-1
+              value: 0
+              on_touch_down: app.touch_down(*args)
+              value_track: True
+              on_touch_move: app.touch_move(*args)
+        MDRaisedButton:
+          text: 'Open Video'
+          pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+          on_release: app.video_file_choser()
+    MDBottomNavigationItem:
+      name: 'Screen 3'
+      text: 'Image Detection'
+      icon: 'image-area'
+      MDFloatLayout:
+        
+        size_hint: 1, 1 
+        Image:
+          id: images
+          size_hint: 1, 1
+        MDRaisedButton:
+          text: 'Open Image'
+          pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+          on_release: app.image_file_choser()

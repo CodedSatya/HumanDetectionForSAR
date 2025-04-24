@@ -1,0 +1,10 @@
+.venv
+datasets
+data
+datasets/**/*.*
+data/**/*.*
+runs/**/*.*
+HumanDetection.rar
+*.zip
+*.rar
+*.mp4

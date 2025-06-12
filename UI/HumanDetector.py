@@ -468,7 +468,7 @@ class HumanDetectorApp(MDApp):
             output_frame = self.draw_results(frame, results)
             self.output_frame = output_frame
             self.update_texture(output_frame, target='image')
-            # cv2.imwrite('output.jpg', output_frame)
+            cv2.imwrite('output.jpg', output_frame)
             # logger.info("Saved output to output.jpg")
             self.image_tab.error_label.text = ""
         except Exception as e:

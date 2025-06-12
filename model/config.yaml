@@ -1,14 +1,30 @@
-#path: C:\Projects\College Projects\HumanDetection\HumanDetection\datasets
-#train: victim_data\images
-#val: victim_data\images
-path: C:\Projects\College Projects\HumanDetection\HumanDetection\data
-train: train\images
-val: val\images
+# path: C:/Projects/College Projects/HumanDetection/HumanDetection/dataset
+# train: train/images
+# val: train/images
+
+# path: C:/Projects/College Projects/HumanDetection/HumanDetection/dataset/thermalHumanImaging/dataset
+# train: train/images
+# val: train/images
+
+# path: C:/Projects/College Projects/HumanDetection/HumanDetection/dataset_aug
+# train: train/images
+# val: train/images
+
+path: C:/Projects/College Projects/HumanDetection/HumanDetection/dataset/ship
+train: train/images
+val: train/images
+
+# path: C:\Projects\College Projects\HumanDetection\HumanDetection\data
+# train: train\images
+# val: val\images
+
+# path: C:\Projects\College Projects\HumanDetection\HumanDetection\NewData
+# train: images
+# val: images
 
 #Classes
 names:
-  0: Bent
-  1: Kneeling
-  2: Lying
-  3: sitting
-  4: upright
+  0: Human
+  1: Torso
+  2: Arm
+  3: Leg

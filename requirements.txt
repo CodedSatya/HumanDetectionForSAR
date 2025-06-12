@@ -1,0 +1,5 @@
+kivymd
+opencv-python
+ultralytics
+numpy 
+plyer
